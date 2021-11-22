@@ -1,5 +1,3 @@
-class Ball {
-  constructor(ballType = "regular") {
-    this.ballType = ballType;
-  }
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
 }
