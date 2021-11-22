@@ -1,1 +1,3 @@
-const summation = (n) => (n * (n + 1)) / 2;
+function array(arr) {
+  return arr.split(",").slice(1, -1).join(" ") || null;
+}
