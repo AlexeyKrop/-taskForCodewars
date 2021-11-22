@@ -1,3 +1,3 @@
-function converter(mpg) {
-  return +(mpg * 0.3540060435382138).toFixed(2);
-}
+var TempleStrings = function (obj, feature) {
+  return `${obj} are ${feature}`;
+};
