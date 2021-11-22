@@ -1,3 +1,5 @@
-var TempleStrings = function (obj, feature) {
-  return `${obj} are ${feature}`;
-};
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
