@@ -1,3 +1,5 @@
-function enough(cap, on, wait) {
-  return on + wait > cap ? on + wait - cap : 0;
+function betterThanAverage(classPoints, yourPoints) {
+  return (
+    yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length
+  );
 }
