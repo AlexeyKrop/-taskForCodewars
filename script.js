@@ -1,3 +1,5 @@
-function mergeArrays(a, b) {
-  return [...new Set(a.concat(b))].sort((a, b) => a - b);
+function stringy(size) {
+  var str = "";
+  for (var i = 1; i <= size; i++) str += i % 2;
+  return str;
 }
