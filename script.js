@@ -1,5 +1,3 @@
-function betterThanAverage(classPoints, yourPoints) {
-  return (
-    yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length
-  );
+function converter(mpg) {
+  return +(mpg * 0.3540060435382138).toFixed(2);
 }
