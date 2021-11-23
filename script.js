@@ -1,8 +1,8 @@
-function solution(M1, M2, m1, m2, V, T) {
-  M1 = (m1 * 0.001) / M1;
-  M2 = (m2 * 0.001) / M2;
-  T = T + 273.15;
-  var R = 0.082;
-
-  return (((M1 + M2) * R * T) / V) * 1000;
+function getGrade(s1, s2, s3) {
+  let q = (s1 + s2 + s3) / 3;
+  if (q >= 90) return "A";
+  if (q >= 80) return "B";
+  if (q >= 70) return "C";
+  if (q >= 60) return "D";
+  if (q >= 0) return "F";
 }
