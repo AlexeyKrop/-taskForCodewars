@@ -1,5 +1,8 @@
-function uefaEuro2016([t1, t2], [s1, s2]) {
-  if (s1 == s2) return `At match ${t1} - ${t2}, teams played draw.`;
-  if (s2 > s1) return `At match ${t1} - ${t2}, ${t2} won!`;
-  if (s2 < s1) return `At match ${t1} - ${t2}, ${t1} won!`;
+function getGrade(s1, s2, s3) {
+  let q = (s1 + s2 + s3) / 3;
+  if (q >= 90) return "A";
+  if (q >= 80) return "B";
+  if (q >= 70) return "C";
+  if (q >= 60) return "D";
+  if (q >= 0) return "F";
 }
