@@ -1,1 +1,4 @@
-const grow = (x) => x.reduce((a, b) => a * b);
+var stringToNumber = function (str) {
+  // put your code here
+  return +str;
+};
