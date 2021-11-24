@@ -1,5 +1,3 @@
-class Kata {
-  static getVolumeOfCuboid(length, width, height) {
-    return length * width * height;
-  }
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0 ? true : false;
 }
