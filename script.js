@@ -1,1 +1,3 @@
-let toBinary = (n) => +n.toString(2);
+function derive(coefficient, exponent) {
+  return `${coefficient * exponent}x^${exponent - 1}`;
+}
