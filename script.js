@@ -1,1 +1,1 @@
-const arr = (n) => Array.from({ length: n }, (_, i) => i);
+const iceBrickVolume = (r, x, y) => 2 * r * r * (x - y);
