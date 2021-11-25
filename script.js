@@ -1,1 +1,3 @@
-const iceBrickVolume = (r, x, y) => 2 * r * r * (x - y);
+function derive(coefficient, exponent) {
+  return `${coefficient * exponent}x^${exponent - 1}`;
+}
