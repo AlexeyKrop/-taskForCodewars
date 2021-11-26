@@ -1,3 +1,1 @@
-function checkForFactor(base, factor) {
-  return base % factor === 0;
-}
+const unusualFive = () => Math.hypot(Math.ceil(Math.PI), Math.floor(Math.PI));
