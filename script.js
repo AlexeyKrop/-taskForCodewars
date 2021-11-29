@@ -1,3 +1,2 @@
-function combat(health, damage) {
-  return health < damage ? 0 : health - damage;
-}
+const elevator = (left, right, call) =>
+  Math.abs(call - left) < Math.abs(call - right) ? "left" : "right";
