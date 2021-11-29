@@ -1,3 +1,3 @@
-function isLockNessMonster(s) {
-  return /tree fiddy| three fifty|3.50/.test(s);
+function findNeedle(haystack) {
+  return "found the needle at position " + haystack.indexOf("needle");
 }
