@@ -1,16 +1,9 @@
-const isPrime = (n) => {
-  if (n > 0) {
-    if (n === 1 || n === 0) {
-      return false;
-    } else {
-      for (let i = 2; i < n; i++) {
-        if (n % i === 0) {
-          return false;
-        }
-      }
-      return true;
-    }
-  } else {
-    return false;
-  }
+const solution = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(function (word) {
+      return word[0].toUpperCase() + word.substr(1);
+    })
+    .join(" ");
 };
