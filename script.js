@@ -1,7 +1,3 @@
-const areaOrPerimeter = function (l, w) {
-  if (l === w) {
-    return l * w;
-  } else {
-    return 2 * (l + w);
-  }
-};
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0 ? true : false;
+}
