@@ -1,9 +1,4 @@
-const solution = (str) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map(function (word) {
-      return word[0].toUpperCase() + word.substr(1);
-    })
-    .join(" ");
-};
+function shortcut(name) {
+  return;
+}
+console.log(shortcut("Patrick Feenan"));
