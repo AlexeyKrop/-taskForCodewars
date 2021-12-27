@@ -1,2 +1,9 @@
-const elevator = (left, right, call) =>
-  Math.abs(call - left) < Math.abs(call - right) ? "left" : "right";
+const solution = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(function (word) {
+      return word[0].toUpperCase() + word.substr(1);
+    })
+    .join(" ");
+};
