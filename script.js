@@ -1,3 +1,3 @@
-function opposite(number) {
-  return -number;
+function square(number) {
+  return number * number;
 }
