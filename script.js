@@ -1,3 +1,3 @@
-const multiply = (x, y) => {
-  return x * y;
-};
+function square(number) {
+  return number * number;
+}
