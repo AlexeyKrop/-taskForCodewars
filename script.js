@@ -1,7 +1,3 @@
-function sakuraFall(v) {
-  if (v > 0) {
-    return 400 / v;
-  } else {
-    return 0;
-  }
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
 }
