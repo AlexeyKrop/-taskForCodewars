@@ -1,3 +1,7 @@
-function capitalizeWord(word) {
-  return word[0].toUpperCase() + word.slice(1);
+function tripleTrouble(one, two, three) {
+  let str = "";
+  for (let i = 0; i < one.length; i++) {
+    str += one[i] + two[i] + three[i];
+  }
+  return str;
 }
