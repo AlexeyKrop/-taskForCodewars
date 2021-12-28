@@ -1,3 +1,4 @@
-function findLongest(str) {
-  return Math.max(...str.split(" ").map((word) => word.length));
+function gooseFilter(birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter((b) => !geese.includes(b));
 }
