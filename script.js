@@ -1,7 +1,3 @@
-function between(a, b) {
-  let arr = [];
-  for (let i = a; i <= b; i++) {
-    arr.push(i);
-  }
-  return arr;
+function findLongest(str) {
+  return Math.max(...str.split(" ").map((word) => word.length));
 }
