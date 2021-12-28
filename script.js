@@ -1,4 +1,3 @@
-function gooseFilter(birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter((b) => !geese.includes(b));
+function find_difference([a, b, c], [d, e, f]) {
+  return Math.abs(a * b * c - d * e * f);
 }
