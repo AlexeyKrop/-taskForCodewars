@@ -1,12 +1,13 @@
-function isIsogram(str) {
-  let strArr = str.toLowerCase();
-  for (let i = 0; i < strArr.length; ++i) {
-    for (let j = i + 1; j < strArr.length; ++j) {
-      if (strArr[i] === strArr[j]) {
-        return false;
+function countSalutes(hallway) {
+  let met = 0;
+  for (let i = 0; i < hallway.length; i++) {
+    if (hallway[i] === ">") {
+      for (let j = i + 1; j < hallway.length; j++) {
+        if (hallway[j] === "<") {
+          met += 1;
+        }
       }
     }
   }
-  return true;
+  return met * 2;
 }
-isIsogram("moo");
