@@ -1,15 +1,13 @@
-var maxRedigit = function (num) {
-  if (String(num).length === 3) {
-    if (typeof num === "number" && num > 0) {
-      num = String(num).split("");
-      num.sort((a, b) => b - a);
-      num = num.join("");
-      return +num;
-    } else {
-      return null;
+function countSalutes(hallway) {
+  let met = 0;
+  for (let i = 0; i < hallway.length; i++) {
+    if (hallway[i] === ">") {
+      for (let j = i + 1; j < hallway.length; j++) {
+        if (hallway[j] === "<") {
+          met += 1;
+        }
+      }
     }
-  } else {
-    return null;
   }
-};
-maxRedigit(99);
+  return met * 2;
+}
