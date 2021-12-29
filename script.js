@@ -1,12 +1,15 @@
-function isIsogram(str) {
-  let strArr = str.toLowerCase();
-  for (let i = 0; i < strArr.length; ++i) {
-    for (let j = i + 1; j < strArr.length; ++j) {
-      if (strArr[i] === strArr[j]) {
-        return false;
-      }
+var maxRedigit = function (num) {
+  if (String(num).length === 3) {
+    if (typeof num === "number" && num > 0) {
+      num = String(num).split("");
+      num.sort((a, b) => b - a);
+      num = num.join("");
+      return +num;
+    } else {
+      return null;
     }
+  } else {
+    return null;
   }
-  return true;
-}
-isIsogram("moo");
+};
+maxRedigit(99);
