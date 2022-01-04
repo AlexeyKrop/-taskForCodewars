@@ -1,6 +1,4 @@
-function largestPairSum(numbers) {
-  return numbers
-    .sort((a, b) => a - b)
-    .slice(-2)
-    .reduce((a, b) => a + b, 0);
+function heron(a, b, c) {
+  const s = (a + b + c) / 2;
+  return Math.sqrt(s * (s - a) * (s - b) * (s - c));
 }
