@@ -1,4 +1,18 @@
-function heron(a, b, c) {
-  const s = (a + b + c) / 2;
-  return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+function onesCounter(input) {
+  const arr = [];
+  let count = 0;
+  for (let i = 0; i < input.length; i++) {
+    if (input[i]) {
+      count += 1;
+    } else {
+      if (count) {
+        arr.push(count);
+      }
+      count = 0;
+    }
+  }
+  if (count) {
+    arr.push(count);
+  }
+  return arr;
 }
