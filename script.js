@@ -1,13 +1,21 @@
-function countSalutes(hallway) {
-  let met = 0;
-  for (let i = 0; i < hallway.length; i++) {
-    if (hallway[i] === ">") {
-      for (let j = i + 1; j < hallway.length; j++) {
-        if (hallway[j] === "<") {
-          met += 1;
+function maxSumBetweenTwoNegatives(a) {
+  const onlyNeg = a.filter((v) => v < 0);
+  if (onlyNeg.length < 2) {
+    return -1;
+  }
+  const arr = [];
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] < 0) {
+      let count = 0;
+      for (let j = i + 1; j < a.length; j++) {
+        if (a[j] < 0) {
+          arr.push(count);
+          break;
+        } else {
+          count += a[j];
         }
       }
     }
   }
-  return met * 2;
+  return Math.max(...arr);
 }
