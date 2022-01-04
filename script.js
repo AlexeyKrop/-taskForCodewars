@@ -1,18 +1,7 @@
-function onesCounter(input) {
-  const arr = [];
-  let count = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i]) {
-      count += 1;
-    } else {
-      if (count) {
-        arr.push(count);
-      }
-      count = 0;
-    }
+function isFibo(a, b, f) {
+  let arr = [a, b];
+  for (let i = 1; i < f + 10; i++) {
+    arr.push(arr[i - 1] + arr[i]);
   }
-  if (count) {
-    arr.push(count);
-  }
-  return arr;
+  return arr.includes(f);
 }
