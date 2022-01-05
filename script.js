@@ -1,6 +1,5 @@
-function elevatorDistance(array) {
-  return array
-    .map((v, i, arr) => arr[i] - arr[i - 1])
-    .filter((v) => !isNaN(v))
-    .reduce((a, b) => a + Math.abs(b), 0);
+function isTriangle(a, b, c) {
+  let max = Math.max(a, b, c);
+  let sum = a + b + c;
+  return sum - max > max;
 }
