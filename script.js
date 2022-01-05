@@ -1,6 +1,7 @@
-function encode(str) {
-  return str
-    .split("")
-    .map((v) => (/[a-z]/gi.test(v) ? v.toLowerCase().charCodeAt() - 96 : v))
-    .join("");
+function turn(c, t) {
+  if (c === "N" && t === "W") return "left";
+  if (c === "W" && t === "S") return "left";
+  if (c === "S" && t === "E") return "left";
+  if (c === "E" && t === "N") return "left";
+  return "right";
 }
