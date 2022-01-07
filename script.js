@@ -1,9 +1,6 @@
-function evaporator(content, evap_per_day, threshold) {
-  var result = 0;
-  var percentage = 100;
-  while (percentage > threshold) {
-    percentage = percentage - percentage * (evap_per_day / 100);
-    result += 1;
-  }
-  return result;
+function largestPairSum(numbers) {
+  let newArr = numbers.sort((a, b) => a - b);
+  console.log(newArr);
+  console.log(newArr[newArr.length - 1] + newArr[newArr.length - 2]);
 }
+largestPairSum([10, 14, 2, 23, 19]);
