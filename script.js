@@ -1,14 +1,3 @@
-function pairZeros(arr) {
-  let zero = 0;
-  return arr
-    .map((v) => {
-      if (v === 0) {
-        if (v === 0) {
-          zero++;
-        }
-        if (v === 0 && zero % 2 === 0) return (v = null);
-      }
-      return v;
-    })
-    .filter((v) => v !== null);
+function duplicateElements(m, n) {
+  return m.some((v, i, arr) => arr.includes(n[i]));
 }
