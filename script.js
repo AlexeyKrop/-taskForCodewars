@@ -1,3 +1,3 @@
-function duplicateElements(m, n) {
-  return m.some((v, i, arr) => arr.includes(n[i]));
+function symmetricPoint([a, b], [c, d]) {
+  return [c * 2 - a, d * 2 - b];
 }
