@@ -1,4 +1,7 @@
-function countRedBeads(n) {
-  if (n < 2) return 0;
-  return (n - 1) * 2;
+function pattern(n) {
+  let arr = [];
+  for (let i = 1; i < n + 1; i++) {
+    arr.push("1" + "*".repeat(i - 1) + i);
+  }
+  return arr.join("\n").replace("1", "");
 }
