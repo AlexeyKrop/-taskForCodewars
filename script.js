@@ -1,9 +1,9 @@
-function sumTriangularNumbers(n) {
-  let sum = 0,
-    total = 0;
-  for (let i = 0; i <= n; i++) {
-    sum += i * 1;
-    total += sum;
+function movie(card, ticket, perc) {
+  var costA = (n = 0),
+    costB = card;
+  while (Math.ceil(costB) >= costA) {
+    costA += ticket;
+    costB += ticket * Math.pow(perc, ++n);
   }
-  return total;
+  return n;
 }
