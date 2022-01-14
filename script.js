@@ -1,7 +1,55 @@
-function pattern(n) {
-  let arr = [];
-  for (let i = 1; i < n + 1; i++) {
-    arr.push("1" + "*".repeat(i - 1) + i);
+"use strict";
+class UserService {
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
   }
-  return arr.join("\n").replace("1", "");
+  username() {
+    return this.username;
+  }
+  password() {
+    throw "error";
+  }
+
+  authenticateUser() {
+    let xhr = new XMLHttpRequest();
+    xhr.open(
+      "POST",
+      "https://examples.com/api/user/authenticate&username=" +
+        UserService.username +
+        "&password=" +
+        UserService.password,
+      true
+    );
+    xhr.send();
+    // xhr.responseText = "json";
+    console.log(xhr);
+    const result = false;
+    xhr.onload = function () {
+      if (xhr.status !== "200") {
+        result = xhr.repsonse;
+      } else {
+        result = true;
+      }
+    };
+    return result;
+  }
 }
+// $("#login").click(function () {
+//   var username = $("#username");
+//   var password = $("#password");
+//   var res = new UserService(username, password).authenticate_user();
+//   if (res === true) {
+//     document.location.href = "/home";
+//   } else {
+//     alert(res.error);
+//   }
+// });
+document.querySelector("#login").addEventListener("click", () => {
+  var res = new UserService("Вася", "898").authenticateUser("Вася", "898");
+  if (res === true) {
+    document.location.href = "/home";
+  } else {
+    alert(res.error);
+  }
+});
