@@ -1,16 +1,55 @@
-function paul(x) {
-  let n = 0;
-  x.map((v) =>
-    v === "Petes kata"
-      ? (n += 10)
-      : v === "kata"
-      ? (n += 5)
-      : v === "eating"
-      ? (n += 1)
-      : null
-  );
-  if (n < 40) return "Super happy!";
-  if (n >= 40 && n < 70) return "Happy!";
-  if (n >= 70 && n < 100) return "Sad!";
-  if (n >= 100) return "Miserable!";
+"use strict";
+class UserService {
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
+  }
+  username() {
+    return this.username;
+  }
+  password() {
+    throw "error";
+  }
+
+  authenticateUser() {
+    let xhr = new XMLHttpRequest();
+    xhr.open(
+      "POST",
+      "https://examples.com/api/user/authenticate&username=" +
+        UserService.username +
+        "&password=" +
+        UserService.password,
+      true
+    );
+    xhr.send();
+    // xhr.responseText = "json";
+    console.log(xhr);
+    const result = false;
+    xhr.onload = function () {
+      if (xhr.status !== "200") {
+        result = xhr.repsonse;
+      } else {
+        result = true;
+      }
+    };
+    return result;
+  }
 }
+// $("#login").click(function () {
+//   var username = $("#username");
+//   var password = $("#password");
+//   var res = new UserService(username, password).authenticate_user();
+//   if (res === true) {
+//     document.location.href = "/home";
+//   } else {
+//     alert(res.error);
+//   }
+// });
+document.querySelector("#login").addEventListener("click", () => {
+  var res = new UserService("Вася", "898").authenticateUser("Вася", "898");
+  if (res === true) {
+    document.location.href = "/home";
+  } else {
+    alert(res.error);
+  }
+});
