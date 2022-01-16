@@ -1,60 +1,21 @@
 "use strict";
-class UserService {
-  constructor(username, password) {
-    this.username = username;
-    this.password = password;
+let coinCombo = function (cents) {
+  let sum = [0, 0, 0, 0];
+  while (cents >= 25) {
+    sum[3]++;
+    cents -= 25;
   }
-  username() {
-    return this.username;
+  while (cents >= 10) {
+    sum[2]++;
+    cents -= 10;
   }
-  password() {
-    throw "error";
+  while (cents >= 5) {
+    sum[1]++;
+    cents -= 5;
   }
-
-  authenticateUser() {
-    let xhr = new XMLHttpRequest();
-    xhr.open(
-      "POST",
-      "https://examples.com/api/user/authenticate&username=" +
-        UserService.username +
-        "&password=" +
-        UserService.password,
-      true
-    );
-    xhr.send();
-    // xhr.responseText = "json";
-    console.log(xhr);
-    let result = false;
-    xhr.onload = function () {
-      if (xhr.status !== "200") {
-        result = xhr.repsonse;
-      } else {
-        result = true;
-      }
-    };
-    return result;
+  while (cents >= 1) {
+    sum[0]++;
+    cents -= 1;
   }
-}
-$("#login").click(function () {
-  var username = $("#username");
-  var password = $("#password");
-  var res = new UserService(username, password).authenticate_user();
-  if (res === true) {
-    document.location.href = "/home";
-  } else {
-    alert(res.error);
-  }
-});
-document.querySelector("#login").addEventListener("click", () => {
-  var res = new UserService("Вася", "898").authenticateUser("Вася", "898");
-  if (res === true) {
-    document.location.href = "/home";
-  } else {
-    alert(res.error);
-  }
-});
-const post = {
-  title: "My post",
-  likesQty: 5,
+  return sum;
 };
-console.log(JSON.stringify(post));
