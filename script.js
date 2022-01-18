@@ -1,7 +1,7 @@
-const removeConsecutiveDuplicates = (s) =>
-  s
-    .split(" ")
-    .map((v, i, arr) => (v === arr[i + 1] ? (v = "") : v))
-    .join(` `)
-    .replace(/\s+/g, " ")
-    .trim();
+function triangular(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i * 1;
+  }
+  return sum;
+}
