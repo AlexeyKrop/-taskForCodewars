@@ -1,7 +1,9 @@
-function triangular(n) {
-  let sum = 0;
-  for (let i = 1; i <= n; i++) {
-    sum += i * 1;
-  }
-  return sum;
+function makePassword(phrase) {
+  return phrase
+    .split(" ")
+    .map((v) => v.slice(0, 1))
+    .join("")
+    .replace(/(o)/gi, 0)
+    .replace(/(s)/gi, 5)
+    .replace(/(i)/gi, 1);
 }
