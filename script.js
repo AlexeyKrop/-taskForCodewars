@@ -1,13 +1,5 @@
-function Node(data) {
-  this.data = data;
-  this.next = null;
-}
+"use strict";
 
-function length(head) {
-  let i = 0;
-  while (head) {
-    head = head.next;
-    i++;
-  }
-  return i;
+function flattenAndSort(array) {
+  return [].concat(...array).sort((a, b) => a - b);
 }
