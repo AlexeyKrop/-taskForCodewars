@@ -1,4 +1,6 @@
 "use strict";
-function symmetricPoint([a, b], [c, d]) {
-  return [c * 2 - a, d * 2 - b];
-}
+const cannonsReady = (gunners) => {
+  return Object.values(gunners).every((response) => response === "aye")
+    ? "Fire!"
+    : "Shiver me timbers!";
+};
