@@ -1,13 +1,4 @@
-function per(n) {
-  let arr = [];
-  while (String(n).length > 1) {
-    n = String(n)
-      .split("")
-      .reduce((a, b) => {
-        return a * b;
-      });
-    arr.push(n);
-  }
-  return arr;
+function length(head) {
+  if (head == null) return 0;
+  return 1 + length(head.next);
 }
-per(69);
