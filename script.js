@@ -1,3 +1,3 @@
-function enough(cap, on, wait) {
-  return on + wait > cap ? on + wait - cap : 0;
+function aspectRatio(x, y) {
+  return [Math.ceil((y * 16) / 9), y];
 }
